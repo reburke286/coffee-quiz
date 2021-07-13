@@ -1,0 +1,24 @@
+{
+  "name": "coffee-quiz",
+  "version": "1.0.0",
+  "description": "coffee quiz for baristas",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reburke286/coffee-quiz"
+  },
+  "author": "Becca Burke",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "jest": "^27.0.6",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5"
+  }
+}

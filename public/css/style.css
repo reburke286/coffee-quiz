@@ -1,0 +1,15 @@
+body {
+  font-family: "Kanit", sans-serif;
+  background-color: beige;
+}
+
+h3 {
+  color: rgb(164, 164, 164);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.questions-container {
+  display: flex;
+}
