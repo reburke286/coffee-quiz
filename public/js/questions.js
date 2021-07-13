@@ -185,7 +185,7 @@ const questions = [
       "Good job! Dairy milk needs to steam hotter than non-dairy, because we need to ensure we're killing off any hazardous bacteria. Non-dairy milks do not have this issue.",
   },
   {
-    title: "How many pumps of mocha go in a Kids Hot Chocolate",
+    title: "How many pumps of mocha go in a Kids Hot Chocolate?",
     choices: [1, 2, 3, 4],
     answer: 2,
     wrong: "Sorry, this is incorrect!",
