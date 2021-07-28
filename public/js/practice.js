@@ -49,26 +49,38 @@ function showResults() {
     const answerContainer = answerContainers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-    console.log(userAnswer);
 
-    // if answer is correct
+    //if answer is correct
     if (userAnswer === currentQuestion.answer) {
       // add to the number of correct answers
       numCorrect++;
-
-      // color the answers green
-      answerContainers[questionNumber].style.color = "lightgreen";
-    }
-    // if answer is wrong or blank
-    else {
-      // color the answers red
-      answerContainers[questionNumber].style.color = "red";
+      $(answerContainer).append(currentQuestion.right).addClass("right");
+    } else if (userAnswer !== currentQuestion.answer) {
+      $(answerContainer).append(currentQuestion.wrong).addClass("wrong");
     }
   });
 
   // show number of correct answers out of total
-  resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;
+  let testResults = "";
+  const score = `Your score is ${calculateScore(
+    numCorrect,
+    questions.length
+  )}%`;
+
+  if (calculateScore(numCorrect, questions.length) < 80) {
+    testResults = "Take quiz again to score higher.";
+  } else {
+    testResults = "Great job! You're ready to make some drinks! ";
+  }
+
+  const resultsInfo = score + " " + testResults;
+  $(resultsContainer).append(resultsInfo);
 }
+
+calculateScore = (correct, total) => {
+  const divided = correct / total;
+  return Math.floor(divided * 100);
+};
 
 // on submit, show results
 submitButton.addEventListener("click", showResults);

@@ -11,9 +11,9 @@ h3 {
   text-align: center;
 }
 
-.questions-container {
-  display: flex;
+#quiz {
   justify-content: center;
+  margin-left: 3rem;
 }
 
 .question {
@@ -31,6 +31,7 @@ h3 {
 
 .submit-btn-container {
   margin: 1.5rem 0rem;
+  margin-left: 3rem;
 }
 
 #submit {
@@ -43,4 +44,20 @@ h3 {
   background-color: grey;
   color: rgb(63, 8, 8);
   cursor: pointer;
+}
+
+.right {
+  color: darkgreen;
+  font-size: 1rem;
+}
+
+.wrong {
+  color: darkred;
+  font-size: 1rem;
+}
+
+#results {
+  font-size: 1.7rem;
+  color: rgb(63, 8, 8);
+  margin-left: 3rem;
 }
