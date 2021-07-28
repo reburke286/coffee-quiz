@@ -1,6 +1,7 @@
 body {
   font-family: "Kanit", sans-serif;
   background-color: beige;
+  font-size: 62.5%;
 }
 
 h3 {
@@ -12,4 +13,34 @@ h3 {
 
 .questions-container {
   display: flex;
+  justify-content: center;
+}
+
+.question {
+  font-size: 1.5rem;
+  color: rgb(63, 8, 8);
+  font-family: "STIX Two Math", serif;
+  padding-top: 1.2rem;
+}
+
+.answers label {
+  display: block;
+  color: black;
+  font-size: 1rem;
+}
+
+.submit-btn-container {
+  margin: 1.5rem 0rem;
+}
+
+#submit {
+  background-color: rgb(63, 8, 8);
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+#submit:hover {
+  background-color: grey;
+  color: rgb(63, 8, 8);
+  cursor: pointer;
 }
